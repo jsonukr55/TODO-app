@@ -1,0 +1,156 @@
+/* * {
+  margin: 0;
+  padding: 0 0 0;
+} */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+nav{
+    position: relative;
+    max-width: 100%;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #2c2a4a;
+}
+
+li a{
+  float: left;
+  left: 50px;
+}
+li #searchbar{
+    float: right;
+    right: 100px;
+}
+
+li a{
+  font-family: "Oswald", sans-serif;
+  display: block;
+  color: whitesmoke;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #4f518c;
+}
+input[type="text"],
+textarea {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: whitesmoke;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px ;   /* 12px 40px */  
+  transition: width 0.4s ease-in-out;
+}
+textarea:hover{
+    background-color: #DABFFF;
+}
+.title:hover{
+  background-color: #DABFFF;
+}
+#searchbar{
+    position: relative;
+    font-family: "Oswald", sans-serif;
+    display: block;
+    right: 0;
+    padding: 10px 10px;
+  }
+#searchbar[type="text"]:focus {
+  width: 50%;
+}
+.form-1 {
+  position: absolute;
+  left: 40%;
+  top: 11%;
+  max-width: 400px;
+  height: 300px;
+  background-color: #2c2a4a;
+  padding: 30px;
+  border-radius: 10px;
+}
+.form-1 input,
+textarea {
+  width: 100%;
+  margin-top: 10px;
+}
+.form-1 input {
+  margin-bottom: 10px;
+}
+label {
+  font-family: "Oswald", sans-serif;
+  color: whitesmoke;
+}
+
+.btn-1 {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  margin-left: 30px;
+  padding: 5px 10px;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  font-size: 16px;
+  /* font-weight: 300; */
+  background-color: #DABFFF;
+  border: none;
+  border-radius: 5px;
+}
+.btn-1:hover{
+    background-color: #907AD6;
+}
+.btn{
+  padding: 5px 10px;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  background-color: #DABFFF;
+  font-size: 16px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.btn:hover{
+  background-color: #907AD6;
+}
+
+.table-1{
+  position: absolute;
+  bottom: 0;
+  top: 450px;
+  left: 17%;
+  bottom: 100px;
+  border: 1px solid black;
+  width: 70%;
+  max-height: fit-content;
+  margin-bottom: 10px;
+}
+table td{
+  text-align: center;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: "Oswald", sans-serif;
+
+}
+
+th, td {
+  /* text-align: left; */
+  padding: 8px;
+  font-weight: 100;
+}
+
+tr:nth-child(even){background-color: #DABFFF}
+
+th {
+  background-color: #4F518C;
+  color: white;
+}
