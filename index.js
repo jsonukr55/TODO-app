@@ -1,64 +1,61 @@
-function getAndUpdate() {
+function addTask() {
   console.log("Updating List...");
-  tit = document.getElementById("title").value;
-  desc = document.getElementById("description").value;
-  if (localStorage.getItem("itemsJson") == null) {
-    itemJsonArray = [];
-    itemJsonArray.push([tit, desc]);
-    localStorage.setItem("itemsJson", JSON.stringify(itemJsonArray));
-  } else {
-    itemJsonArrayStr = localStorage.getItem("itemsJson");
-    itemJsonArray = JSON.parse(itemJsonArrayStr);
-    itemJsonArray.push([tit, desc]);
-    localStorage.setItem("itemsJson", JSON.stringify(itemJsonArray));
-  }
-  update();
+  var task = {};
+  task.title = document.getElementById("title").value;
+  task.description = document.getElementById("description").value;
+  var items = getItemFromLocalStorage();
+  items.push(task);
+  setItemsToLocalStorage(items);
+  refreshTaskGrid();
 }
 
-function resetForm(){
-    document.getElementById('title').value='';
-    document.getElementById('description').value='';
-    }
+function setItemsToLocalStorage(items) {
+  localStorage.setItem("items",JSON.stringify(items));
+}
 
-function update() {
-  if (localStorage.getItem("itemsJson") == null) {
-    itemJsonArray = [];
-    localStorage.setItem("itemsJson", JSON.stringify(itemJsonArray));
-  } else {
-    itemJsonArrayStr = localStorage.getItem("itemsJson");
-    itemJsonArray = JSON.parse(itemJsonArrayStr);
+function getItemFromLocalStorage() {
+  var items = JSON.parse(localStorage.getItem("items"));
+  if (items == null) {
+    items = [];
   }
-// table fill up
+  return items;
+}
+
+function resetForm() {
+  document.getElementById("title").value = "";
+  document.getElementById("description").value = "";
+}
+
+function refreshTaskGrid() {
+  var items = getItemFromLocalStorage();
+  // table fill up
   let tableBody = document.getElementById("tableBody");
   let str = "";
-  itemJsonArray.forEach((element, index) => {
+  items.forEach((task, index) => {
     str += `
         <tr>
         <th scope="row">${index + 1}</th>
-        <td>${element[0]}</td>
-        <td>${element[1]}</td> 
-        <td><button class="btn" onclick="deleted(${index})">Remove</button></td> 
+        <td>${task.title}</td>
+        <td>${task.description}</td> 
+        <td><button class="btn" onclick="deleteItems(${index})">Remove</button></td> 
         </tr>`;
   });
   tableBody.innerHTML = str;
 }
-add = document.getElementById("add");
-add.addEventListener("click", getAndUpdate);
-update();
-function deleted(itemIndex) {
+
+function deleteItems(itemIndex) {
   console.log("Delete", itemIndex);
-  itemJsonArrayStr = localStorage.getItem("itemsJson");
-  itemJsonArray = JSON.parse(itemJsonArrayStr);
-  itemJsonArray.splice(itemIndex, 1);
-  localStorage.setItem("itemsJson", JSON.stringify(itemJsonArray));
-  update();
+  itemStr = localStorage.getItem("items")
+  items = JSON.parse(itemStr);
+  items.splice(itemIndex, 1);
+  localStorage.setItem("items", JSON.stringify(items));
+  refreshTaskGrid();
 }
 
-// clear storage
 function clearStorage() {
   if (confirm("Do you areally want to clear?")) {
     console.log("Clearing the storage");
-    localStorage.clear();
-    update();
+    setItemsToLocalStorage([]);
+    refreshTaskGrid();
   }
 }

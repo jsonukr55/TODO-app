@@ -31,7 +31,7 @@
           <input type="text" class="title" id="title" placeholder="Title"/><br />
           <label>Description</label><br />
           <textarea placeholder="Description" id="description" cols="23"></textarea>
-          <button type="submit" id="add" class="btn-1">Add Task</button>
+          <button type="submit" id="add" class="btn-1" onclick="addTask()">Add Task</button>
           <button  id="clear" class="btn" onclick="clearStorage()">Clear list</button>
         </div>
     </div>
@@ -46,12 +46,6 @@
         </tr>
       </thead>
       <tbody id="tableBody">
-        <tr>
-          <td scope="col">1.</td>
-          <td scope="col">Go to market</td>
-          <td scope="col">Buy onions, wine, cold drinks</td>
-          <td scope="col"><button class="btn">Remove</button></td>
-        </tr>
       </tbody>
       </table>
     </div>

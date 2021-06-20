@@ -1,6 +1,5 @@
-/* * {
-  margin: 0;
-  padding: 0 0 0;
+/* *{
+  background-color: #FFE4D6;
 } */
 .row {
   display: flex;
@@ -15,7 +14,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #2c2a4a;
+  background-color: #FFCDB2;
 }
 
 li a{
@@ -30,14 +29,14 @@ li #searchbar{
 li a{
   font-family: "Oswald", sans-serif;
   display: block;
-  color: whitesmoke;
+  color: #322F37;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 li a:hover {
-  background-color: #4f518c;
+  background-color: #B5838D;
 }
 input[type="text"],
 textarea {
@@ -53,10 +52,10 @@ textarea {
   transition: width 0.4s ease-in-out;
 }
 textarea:hover{
-    background-color: #DABFFF;
+    background-color: #B5838D;
 }
 .title:hover{
-  background-color: #DABFFF;
+  background-color: #B5838D;
 }
 #searchbar{
     position: relative;
@@ -74,7 +73,7 @@ textarea:hover{
   top: 11%;
   max-width: 400px;
   height: 300px;
-  background-color: #2c2a4a;
+  background-color: #FFB4A2;
   padding: 30px;
   border-radius: 10px;
 }
@@ -88,7 +87,7 @@ textarea {
 }
 label {
   font-family: "Oswald", sans-serif;
-  color: whitesmoke;
+  color: #322F37;
 }
 
 .btn-1 {
@@ -106,7 +105,7 @@ label {
   border-radius: 5px;
 }
 .btn-1:hover{
-    background-color: #907AD6;
+    background-color: #B5838D;
 }
 .btn{
   padding: 5px 10px;
@@ -114,11 +113,11 @@ label {
   text-align: center;
   background-color: #DABFFF;
   font-size: 16px;
-  border: 1px solid black;
+  border: 0 solid black;
   border-radius: 5px;
 }
 .btn:hover{
-  background-color: #907AD6;
+  background-color: #B5838D;
 }
 
 .table-1{
@@ -151,6 +150,6 @@ th, td {
 tr:nth-child(even){background-color: #DABFFF}
 
 th {
-  background-color: #4F518C;
-  color: white;
+  background-color: #E5989B;
+  color: #322F37;
 }
