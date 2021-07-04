@@ -17,7 +17,7 @@ A user may add to TODO task list, view all the tasks they have to complete, if t
 <img src="UI Sample/TODO_app2.jpg" width="500" >
 
 
+<h5>For live demo please <a href="https://kamkalist.herokuapp.com/">Click Here</a></h5>
+<h5>Note:</h5>
+<h6>More fearures are cooming soon</h6>
 
-
-For live demo please refer to this link:
-	https://kamkalist.herokuapp.com/ 
