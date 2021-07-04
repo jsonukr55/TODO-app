@@ -2,18 +2,19 @@
 
 A TODO-app, written in JavaScript, HTML and CSS.
 
-A user may add to TODO task list, view all the tasks they have to complete, if the task is completed then just click on ìremoveî button on right side of task after clicking it will be removed from the task list.
+A user may add to TODO task list, view all the tasks they have to complete, if the task is completed then just click on ‚Äúremove‚Äù button on right side of task after clicking it will be removed from the task list.
+ 
 
-Features:
-* Reusable code
-* Self-explanatory code
-* Storeís data locally on your pc
-* Code can be used for integrating Database easily.
+<h1>Features:</h1>
+* Reusable code<br>
+* Self-explanatory code<br>
+* Store‚Äôs data locally on your pc<br>
+* Code can be used for integrating Database easily.<br>
 
-UI:
+<h1>UI:</h1>
 
-
-
+<img src="UI Sample/TODO_app_Home.jpg" width="500" >
+<img src="UI Sample/TODO_app2.jpg" width="500" >
 
 
 
